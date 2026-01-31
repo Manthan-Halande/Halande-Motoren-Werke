@@ -1,6 +1,6 @@
 # HMW — Halande Motoren Werke
 
-HMW (Halande Motoren Werke) is a premium sports car brand concept website designed with an ultra-luxury aesthetic — combining Ferrari-level performance energy with Apple-style minimalism.
+HMW (Halande Motoren Werke) is a premium sports car brand concept website designed with an ultra-luxury aesthetic — combining Ferrari-level performance energy with Apple-style minimalism. (This is a totally fictional company)
 
 This project is a cinematic dark-mode landing page featuring:
 
