@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMW | Begin Your Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // -------------------------------------------------------------------
+            // STEP 1: PASTE YOUR PUBLIC KEY BELOW
+            // Be sure to keep the quotes around the key string.
+            // -------------------------------------------------------------------
+            emailjs.init("zmyHDEVJ4SSYI2Hur")
+        })();
+    </script>
+
+    <style>
+        .inquire-hero {
+            padding-top: 140px;
+            padding-bottom: 60px;
+            background: radial-gradient(circle at 50% 0%, #1a222e 0%, var(--color-bg-deep) 60%);
+        }
+
+        .form-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Custom Radio Selector */
+        .car-selector {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        @media(max-width: 768px) {
+            .car-selector {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .car-option {
+            position: relative;
+        }
+
+        .car-option input {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .car-option label {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: var(--color-bg-subtle);
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .car-option input:checked+label {
+            border-color: var(--color-gold);
+            background: rgba(200, 164, 77, 0.05);
+            box-shadow: 0 0 20px rgba(200, 164, 77, 0.1);
+        }
+
+        .option-thumb {
+            width: 80px;
+            height: 50px;
+            object-fit: contain;
+            margin-right: 20px;
+        }
+
+        .option-details h4 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .option-details span {
+            font-family: var(--font-tech);
+            color: var(--color-gold);
+            font-size: 0.8rem;
+        }
+
+        /* Form Inputs */
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 16px;
+            background: transparent;
+            border: 1px solid var(--color-border);
+            color: var(--color-text-main);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--color-gold);
+        }
+
+        /* Success Overlay */
+        .success-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(5, 6, 7, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .success-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .success-content {
+            text-align: center;
+            max-width: 500px;
+            transform: translateY(20px);
+            transition: transform 0.5s ease;
+        }
+
+        .success-overlay.active .success-content {
+            transform: translateY(0);
+        }
+
+        .check-icon {
+            font-size: 4rem;
+            color: var(--color-gold);
+            margin-bottom: 20px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">HMW</a>
+            <nav class="nav-links">
+                <a href="models.html">Models</a>
+                <a href="heritage.html">Heritage</a>
+                <a href="contact.html">Contact</a>
+                <a href="inquire.html">Private Clients</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="inquire-hero text-center">
+            <div class="container">
+                <span class="hero-tagline fade-up">Commission Your Legacy</span>
+                <h1 class="fade-up">Allocation Request</h1>
+            </div>
+        </section>
+
+        <section class="container form-section fade-up">
+            <form id="inquiry-form">
+                <h3 style="margin-bottom: 30px;">1. Select Model</h3>
+                <div class="car-selector">
+                    <div class="car-option">
+                        <input type="radio" name="model" id="m1" value="Valken S9" checked>
+                        <label for="m1">
+                            <img src="assets/Car images/HMW Valken S9.jpeg" class="option-thumb">
+                            <div class="option-details">
+                                <h4>Valken S9</h4><span>Track Performance</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="car-option">
+                        <input type="radio" name="model" id="m2" value="Obsidian GT">
+                        <label for="m2">
+                            <img src="assets/Car images/HMW Obsidian V12 GT.png" class="option-thumb">
+                            <div class="option-details">
+                                <h4>Obsidian GT</h4><span>V12 Grand Tourer</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="car-option">
+                        <input type="radio" name="model" id="m3" value="Nachtjäger W16">
+                        <label for="m3">
+                            <img src="assets/Car images/HMW Nachtjäger W16 Hyper.jpeg" class="option-thumb">
+                            <div class="option-details">
+                                <h4>Nachtjäger</h4><span>Hypercar</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="car-option">
+                        <input type="radio" name="model" id="m4" value="Aurelius RS">
+                        <label for="m4">
+                            <img src="assets/Car images/HMW Aurelius RS.jpeg" class="option-thumb">
+                            <div class="option-details">
+                                <h4>Aurelius RS</h4><span>Hybrid Future</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <h3 style="margin-bottom: 30px;">2. Client Details</h3>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" class="form-input" required placeholder="e.g. Alexander Pierce">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" class="form-input" required placeholder="e.g. alexander@example.com">
+                </div>
+
+                <div class="text-center" style="margin-top: 60px;">
+                    <button type="submit" id="inquire-submit" class="btn btn-primary"
+                        style="width: 100%; max-width: 400px;">Submit
+                        Request</button>
+                    <p style="margin-top: 20px; font-size: 0.8rem; color: var(--color-text-muted);">A Digital Concierge
+                        will contact you within 24 hours.</p>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Success Modal -->
+    <div class="success-overlay" id="success-modal">
+        <div class="success-content">
+            <span class="check-icon">✓</span>
+            <h2>Request Confirmed</h2>
+            <p id="success-message">Thank you. An email has been sent to confirm your allocation request for the Valken
+                S9.</p>
+            <a href="index.html" class="btn btn-secondary" style="margin-top: 30px;">Return to Homepage</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('inquiry-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            btn.innerText = "Processing...";
+            btn.style.opacity = "0.7";
+
+            // Collect Form Data
+            const model = document.querySelector('input[name="model"]:checked').value;
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+
+            // Prepare EmailJS Parameters
+            const templateParams = {
+                to_name: "HMW Concierge",
+                from_name: name,
+                from_email: email,
+                message: `New Allocation Request for Model: ${model}. Contact email: ${email}`,
+                model_name: model
+            };
+
+            // -------------------------------------------------------------------
+            // STEP 2: PASTE YOUR 4 TEMPLATE IDs BELOW
+            // -------------------------------------------------------------------
+            const templateIds = {
+                "Valken S9": "template_sfpl1dv",        // Paste ID for Valken S9
+                "Obsidian GT": "",    // Paste ID for Obsidian GT
+                "Nachtjäger W16": "template_yuvf7km",    // Paste ID for Nachtjäger W16
+                "Aurelius RS": ""     // Paste ID for Aurelius RS
+            };
+
+            const selectedTemplateId = templateIds[model];
+
+            // -------------------------------------------------------------------
+            // STEP 3: PASTE YOUR SERVICE ID BELOW
+            // -------------------------------------------------------------------
+            const serviceId = "service_p2wwplh"; // Your Service ID
+
+            if (!selectedTemplateId) {
+                alert(`Error: No Template ID configured for ${model}. Please add an ID for this car in the code (Step 2).`);
+                btn.innerText = originalText;
+                btn.style.opacity = "1";
+                return;
+            }
+
+            emailjs.send(serviceId, selectedTemplateId, templateParams)
+                .then(function () {
+                    // Success
+                    document.getElementById('success-message').innerText = `Thank you, ${name}. We have received your request for the ${model}. Check your inbox for confirmation.`;
+                    document.getElementById('success-modal').classList.add('active');
+                    btn.innerText = "Sent";
+                }, function (error) {
+                    // Error
+                    console.log('FAILED...', error);
+                    // Detailed Alert
+                    alert(`Submission Failed.\nDETAILS: ${JSON.stringify(error, null, 2)}`);
+                    btn.innerText = originalText;
+                    btn.style.opacity = "1";
+                });
+        });
+
+
+        // Availability Logic
+        const carRadios = document.querySelectorAll('input[name="model"]');
+        const submitBtn = document.getElementById('inquire-submit'); // We need to assume/ensure ID exists or use querySelector
+        const submitBtnOriginalText = submitBtn ? submitBtn.innerText : "Request Allocation";
+
+        carRadios.forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                const model = e.target.value;
+                const unavailableModels = ["Obsidian GT", "Aurelius RS"];
+
+                if (unavailableModels.includes(model)) {
+                    submitBtn.disabled = true;
+                    submitBtn.innerText = "Waitlist Full (Unavailable)";
+                    submitBtn.style.opacity = "0.5";
+                    submitBtn.style.cursor = "not-allowed";
+                } else {
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = submitBtnOriginalText;
+                    submitBtn.style.opacity = "1";
+                    submitBtn.style.cursor = "pointer";
+                }
+            });
+        });
+
+        // Simple fade-up init for this page
+        setTimeout(() => {
+            document.querySelectorAll('.fade-up').forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
+        }, 100);
+    </script>
+</body>
+
+</html>

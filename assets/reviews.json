@@ -1,0 +1,40 @@
+[
+    {
+        "name": "Sarika Halande",
+        "car": "Valken S9",
+        "rating": 5,
+        "text": "This is the fastest car i have ever drove, and with the best sound",
+        "timestamp": 1769868595803
+    },
+    {
+        "name": "Manthan Halande",
+        "car": "Nachtj\u00e4ger W16",
+        "rating": 5,
+        "text": "This car is nothing less than a beast, its the craziest car i have ever drove",
+        "timestamp": 1769868500996
+    },
+    {
+        "name": "James C.",
+        "car": "Obsidian GT",
+        "rating": 5,
+        "text": "I've owned Aston Martins and Bentleys. The Obsidian is in a different league. The silence at 180km/h is eerie."
+    },
+    {
+        "name": "Elena R.",
+        "car": "Valken S9",
+        "rating": 5,
+        "text": "Visceral. That's the only word. It demands your attention every second."
+    },
+    {
+        "name": "Marcus T.",
+        "car": "Aurelius RS",
+        "rating": 4,
+        "text": "The hybrid transition is seamless. My only complaint is the waiting list for service appointments."
+    },
+    {
+        "name": "Alexander P.",
+        "car": "Nachtj\u00c3\u00a4ger W16",
+        "rating": 5,
+        "text": "It terrifies me. I love it."
+    }
+]

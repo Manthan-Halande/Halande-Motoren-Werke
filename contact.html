@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMW | Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">HMW</a>
+            <nav class="nav-links">
+                <a href="models.html">Models</a>
+                <a href="heritage.html">Heritage</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="inquire.html">Private Clients</a>
+            </nav>
+            <a href="inquire.html" class="btn btn-secondary" style="padding: 10px 24px; font-size: 0.75rem;">Inquire</a>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px; min-height: 80vh; display: flex; flex-direction: column; justify-content: center;">
+        <section class="section-padding">
+            <div class="container">
+                <h1 class="text-center fade-up" style="margin-bottom: 60px;">Get in Touch</h1>
+
+                <div class="contact-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; text-align: center;">
+                    <div class="contact-card fade-up">
+                        <h3 style="color: var(--color-gold); margin-bottom: 20px;">Global Headquarters</h3>
+                        <p style="color: var(--color-text-muted);">
+                            1200 Hyperion Ave<br>
+                            Stuttgart, Germany 70173
+                        </p>
+                    </div>
+
+                    <div class="contact-card fade-up" style="transition-delay: 0.1s;">
+                        <h3 style="color: var(--color-gold); margin-bottom: 20px;">Sales & Commission</h3>
+                        <p style="color: var(--color-text-muted);">
+                            For allocation requests and bespoke commissions.<br>
+                            <a href="inquire.html"
+                                style="color: #fff; text-decoration: underline; margin-top: 10px; display: inline-block;">Private
+                                Client Portal</a>
+                        </p>
+                    </div>
+
+                    <div class="contact-card fade-up" style="transition-delay: 0.2s;">
+                        <h3 style="color: var(--color-gold); margin-bottom: 20px;">Press</h3>
+                        <p style="color: var(--color-text-muted);">
+                            press@halandemotoren.com<br>
+                            +49 711 555 0199
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="index.html" class="logo">HMW</a>
+                <nav class="nav-links">
+                    <a href="models.html">Models</a>
+                    <a href="heritage.html">Heritage</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="inquire.html">Private Clients</a>
+                </nav>
+                <div class="socials" style="color: var(--color-gold);">
+                    <a href="https://www.instagram.com/manthanhustles/" target="_blank"
+                        style="text-decoration:none; color:inherit; margin-right:15px;">IG</a>
+                    <a href="https://www.youtube.com/@ManthanHalandeyt" target="_blank"
+                        style="text-decoration:none; color:inherit;">YT</a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 Halande Motoren Werke. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        setTimeout(() => {
+            document.querySelectorAll('.fade-up').forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
+        }, 100);
+    </script>
+</body>
+
+</html>
